@@ -1,0 +1,32 @@
+{
+  "name": "tiendita-pg-pentest-lab",
+  "version": "1.0.0",
+  "description": "Demo store app with PostgreSQL for controlled pentesting practice",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-user/tiendita-pg-pentest-lab.git"
+  },
+  "keywords": [
+    "express",
+    "postgres",
+    "pgadmin",
+    "pentesting",
+    "lab"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "helmet": "^8.0.0",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

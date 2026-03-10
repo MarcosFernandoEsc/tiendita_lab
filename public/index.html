@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiendita Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Tiendita Lab</h1>
+      <p class="subtitle">Demo simple conectada a PostgreSQL para pruebas controladas.</p>
+
+      <section>
+        <h2>Productos</h2>
+        <div id="products" class="grid"></div>
+      </section>
+
+      <section>
+        <h2>Crear pedido</h2>
+        <form id="order-form">
+          <label>
+            Nombre
+            <input type="text" id="customer_name" required />
+          </label>
+
+          <label>
+            Email
+            <input type="email" id="customer_email" required />
+          </label>
+
+          <label>
+            Producto
+            <select id="product_id" required></select>
+          </label>
+
+          <label>
+            Cantidad
+            <input type="number" id="quantity" min="1" value="1" required />
+          </label>
+
+          <button type="submit">Comprar</button>
+        </form>
+
+        <pre id="result" aria-live="polite"></pre>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

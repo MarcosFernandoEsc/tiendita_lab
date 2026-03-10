@@ -1,0 +1,88 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1c2230;
+  --muted: #57607a;
+  --accent: #0f766e;
+  --accent-dark: #0a5c56;
+  --border: #d8deea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top left, #d9f7ef 0%, var(--bg) 40%);
+  color: var(--text);
+}
+
+.container {
+  width: min(1000px, 92vw);
+  margin: 2rem auto;
+  background: var(--card);
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 28px rgba(17, 24, 39, 0.08);
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+.subtitle {
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: #fbfcff;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.65rem;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-top: 0.25rem;
+}
+
+button {
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background: var(--accent-dark);
+}
+
+pre {
+  background: #0f172a;
+  color: #c8fce8;
+  padding: 0.75rem;
+  border-radius: 8px;
+  overflow: auto;
+}
