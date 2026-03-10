@@ -67,6 +67,44 @@ git remote add origin https://github.com/TU_USUARIO/TU_REPO.git
 git push -u origin main
 ```
 
+## 7) Incluir la base de datos para compartir
+
+Ya incluyes un esquema reproducible en `database/init.sql`. Si quieres compartir tambien una copia completa de datos, agrega un dump.
+
+### Exportar dump desde pgAdmin
+
+1. Click derecho en la base `tiendita_lab` -> `Backup...`
+2. `Format`: `Plain`
+3. `Filename`: `database/tiendita_lab_dump.sql`
+4. Click en `Backup`
+
+Luego subelo al repo:
+
+```bash
+git add database/tiendita_lab_dump.sql
+git commit -m "chore: add database dump"
+git push
+```
+
+### Restaurar dump (otra persona)
+
+1. Crear una base vacia (por ejemplo `tiendita_lab`)
+2. En pgAdmin abrir `Query Tool` sobre esa base
+3. Cargar y ejecutar `database/tiendita_lab_dump.sql`
+
+Si no compartes dump, al menos deben ejecutar `database/init.sql` para crear tablas y datos semilla.
+
+## 8) Como compartir el proyecto
+
+Si el repositorio es `Public`, normalmente si basta con pasar el link de GitHub.
+
+Checklist minimo para compartir:
+
+- Link del repo: `https://github.com/TU_USUARIO/TU_REPO`
+- Instrucciones del `README.md`
+- Confirmar que `.env` no esta en GitHub (solo `.env.example`)
+- Opcional: incluir `database/tiendita_lab_dump.sql` si quieres que levanten exactamente tus datos
+
 ## Nota de seguridad
 
 Usa esta app solo para pruebas autorizadas. No hagas pruebas en sistemas de terceros sin permiso explicito.
